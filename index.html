@@ -1951,25 +1951,36 @@ function toggleLoginPass() {
 //  INIT
 
 function initApp() {
-  buildNav();
-  renderCourses();
-  renderVideos();
-  renderUsers();
-  renderChat('General');
-  showDashboard();
-  // Update user display
-  document.getElementById('user-avatar').textContent = currentUser.initials;
-  document.getElementById('user-name-display').textContent = currentUser.name;
-  document.getElementById('user-email-display').textContent = currentUser.email;
-  document.getElementById('sidebar-role-label').textContent = { admin:'Administrador', tutor:'Tutor', estudiante:'Estudiante' }[currentRole];
-  // Hide admin-only buttons for non-admins
+  try { buildNav(); } catch(e) { console.error('buildNav',e); }
+  try { renderCourses(); } catch(e) { console.error('renderCourses',e); }
+  try { renderVideos(); } catch(e) { console.error('renderVideos',e); }
+  try { renderUsers(); } catch(e) { console.error('renderUsers',e); }
+  try { renderChat('General'); } catch(e) { console.error('renderChat',e); }
+  try { showDashboard(); } catch(e) { console.error('showDashboard',e); }
+
+  var avatar = document.getElementById('user-avatar');
+  var nameEl  = document.getElementById('user-name-display');
+  var emailEl = document.getElementById('user-email-display');
+  var roleEl  = document.getElementById('sidebar-role-label');
+  var certEl  = document.getElementById('cert-name-display');
+  var roleLabels = { admin:'Administrador', tutor:'Tutor', estudiante:'Estudiante' };
+
+  if(avatar)  avatar.textContent  = currentUser.initials;
+  if(nameEl)  nameEl.textContent  = currentUser.name;
+  if(emailEl) emailEl.textContent = currentUser.email;
+  if(roleEl)  roleEl.textContent  = roleLabels[currentRole] || currentRole;
+  if(certEl)  certEl.textContent  = currentUser.name;
+
   if(currentRole === 'estudiante') {
-    document.getElementById('btn-new-course') && (document.getElementById('btn-new-course').style.display='none');
+    var newCourseBtn = document.getElementById('btn-new-course');
+    if(newCourseBtn) newCourseBtn.style.display = 'none';
   }
-  // Cert name
-  document.getElementById('cert-name-display').textContent = currentUser.name;
-  // Load saved API keys
-  setTimeout(loadApiKeys, 300);
+
+  // Force app visible
+  var appEl = document.getElementById('app');
+  if(appEl) { appEl.style.display = 'flex'; appEl.classList.add('visible'); }
+
+  setTimeout(function(){ try { loadApiKeys(); } catch(e){} }, 300);
 }
 
 function buildNav() {
