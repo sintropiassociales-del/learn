@@ -3244,5 +3244,64 @@ function submitRegister() {
   // In production: send to backend / email via Formspree
 }
 </script>
+
+<script>
+// Script de emergencia - fuerza visibilidad del app tras login
+(function() {
+  var _loginBtn = document.getElementById('login-submit-btn');
+  if (!_loginBtn) return;
+  
+  _loginBtn.addEventListener('click', function() {
+    setTimeout(function() {
+      var app = document.getElementById('app');
+      var splash = document.getElementById('splash');
+      if (app && app.classList.contains('visible')) {
+        // Ya visible por doLogin - forzar dimensiones
+        app.style.cssText = [
+          'display:flex',
+          'flex-direction:row', 
+          'min-height:100vh',
+          'width:100vw',
+          'max-width:100%',
+          'position:fixed',
+          'top:0',
+          'left:0',
+          'right:0',
+          'bottom:0',
+          'z-index:100',
+          'background:var(--bg, #F4F2FB)'
+        ].join(' !important;') + ' !important';
+        if (splash) {
+          splash.style.cssText = 'display:none !important; visibility:hidden !important; opacity:0 !important; pointer-events:none !important;';
+        }
+      }
+    }, 200);
+    
+    setTimeout(function() {
+      var app = document.getElementById('app');
+      var splash = document.getElementById('splash');
+      if (app && app.classList.contains('visible')) {
+        app.style.cssText = [
+          'display:flex',
+          'flex-direction:row',
+          'min-height:100vh', 
+          'width:100vw',
+          'max-width:100%',
+          'position:fixed',
+          'top:0',
+          'left:0',
+          'right:0', 
+          'bottom:0',
+          'z-index:100',
+          'background:var(--bg, #F4F2FB)'
+        ].join(' !important;') + ' !important';
+        if (splash) {
+          splash.style.cssText = 'display:none !important; visibility:hidden !important; opacity:0 !important;';
+        }
+      }
+    }, 600);
+  });
+})();
+</script>
 </body>
 </html>
