@@ -47,7 +47,7 @@ body {
   background: var(--bg);
   color: var(--text);
   min-height: 100vh;
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 /* ── UTILITIES ── */
@@ -212,8 +212,8 @@ body {
 .btn:disabled { opacity: 0.5; cursor: not-allowed; transform: none !important; }
 
 /* ── APP SHELL ── */
-#app { display: none !important; min-height: 100vh; }
-#app.visible { display: flex !important; }
+#app { display: none !important; }
+#app.visible { display: flex !important; min-height: 100vh; width: 100%; position: relative; z-index: 1; }
 
 /* ── SIDEBAR ── */
 .sidebar {
@@ -222,7 +222,7 @@ body {
   border-right: 1px solid rgba(91,33,212,0.12);
   display: flex; flex-direction: column;
   height: 100vh; position: sticky; top: 0;
-  overflow-y: auto; overflow-x: hidden;
+  overflow-y: auto; overflow-x: clip;
   transition: transform 0.3s ease, width 0.3s ease;
   z-index: 100;
 }
@@ -1978,7 +1978,10 @@ function initApp() {
 
   // Force app visible
   var appEl = document.getElementById('app');
-  if(appEl) { appEl.style.display = 'flex'; appEl.classList.add('visible'); }
+  if(appEl) {
+    appEl.classList.add('visible');
+    appEl.style.cssText = 'display:flex !important; min-height:100vh; width:100%; position:relative;';
+  }
 
   setTimeout(function(){ try { loadApiKeys(); } catch(e){} }, 300);
 }
