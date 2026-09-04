@@ -852,6 +852,93 @@ tbody tr:hover td { background: rgba(107, 33, 245, 0.03); }
 
 .form-2col { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
 
+/* Constructor de cursos */
+.constructor-layout { display: grid; grid-template-columns: 260px 1fr; gap: 1.5rem; }
+.lista-modulos { display: flex; flex-direction: column; gap: 6px; }
+.modulo-item {
+  background: var(--blanco); border: 1.5px solid var(--borde);
+  border-radius: 10px; padding: 0.75rem 1rem;
+  cursor: pointer; transition: all 0.15s;
+}
+.modulo-item:hover { border-color: var(--morado); background: rgba(107,33,245,0.04); }
+.modulo-item.activo { border-color: var(--morado); border-left: 3px solid var(--morado); background: rgba(107,33,245,0.07); }
+.modulo-num { font-size: 0.65rem; color: var(--morado); font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; }
+.modulo-nombre { font-size: 0.85rem; font-weight: 600; color: var(--texto); margin-top: 2px; }
+.modulo-meta { font-size: 0.72rem; color: var(--texto-suave); margin-top: 2px; }
+
+.tabs-constructor { display: flex; border-bottom: 1px solid var(--borde); background: var(--fondo2); }
+.tab-cons {
+  padding: 0.75rem 1.25rem; background: transparent; border: none;
+  color: var(--texto-medio); font-family: 'Open Sans', sans-serif;
+  font-size: 0.83rem; font-weight: 600; cursor: pointer;
+  border-bottom: 2px solid transparent; transition: all 0.15s;
+}
+.tab-cons.activo { color: var(--morado); border-bottom-color: var(--morado); }
+.tab-cons:hover:not(.activo) { color: var(--morado); }
+.panel-cons { padding: 1.5rem; }
+
+.zona-subida {
+  border: 2px dashed var(--borde); border-radius: 12px;
+  padding: 2rem; text-align: center; cursor: pointer;
+  transition: border-color 0.2s, background 0.2s;
+  background: var(--fondo);
+}
+.zona-subida:hover { border-color: var(--morado); background: rgba(107,33,245,0.04); }
+.zona-icono { font-size: 2.5rem; margin-bottom: 0.75rem; }
+.zona-titulo { font-weight: 600; font-size: 0.9rem; margin-bottom: 0.25rem; }
+.zona-hint { font-size: 0.75rem; color: var(--texto-suave); }
+
+.lista-archivos { margin-top: 1rem; display: flex; flex-direction: column; gap: 0.5rem; }
+.archivo-item {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0.6rem 0.875rem; background: var(--fondo2);
+  border: 1px solid var(--borde); border-radius: 8px; font-size: 0.82rem;
+}
+.archivo-nombre { display: flex; align-items: center; gap: 0.5rem; }
+.archivo-acciones { display: flex; gap: 4px; }
+
+.embed-preview { border-radius: 10px; overflow: hidden; border: 1px solid var(--borde); margin-top: 1rem; }
+.embed-preview iframe { display: block; width: 100%; height: 240px; }
+
+/* Preguntas quiz */
+.pregunta-card {
+  background: var(--fondo); border: 1.5px solid var(--borde);
+  border-radius: 10px; padding: 1rem; margin-bottom: 0.75rem;
+}
+.pregunta-num { font-size: 0.68rem; color: var(--morado); font-weight: 700; background: rgba(107,33,245,0.1); padding: 2px 8px; border-radius: 4px; display: inline-block; margin-bottom: 0.5rem; }
+.opcion-item { display: flex; align-items: center; gap: 8px; margin-bottom: 0.4rem; font-size: 0.85rem; }
+.opcion-item input[type="radio"] { accent-color: var(--morado); }
+.opcion-correcta { color: #0F9E7B; font-weight: 600; }
+
+/* Certificado */
+.cert-wrap {
+  background: linear-gradient(135deg, #FFFFFF 0%, #F0EAFF 50%, #FFE8D6 100%);
+  border: 2px solid var(--morado); border-radius: 20px;
+  padding: 3rem 2rem; text-align: center;
+  max-width: 640px; margin: 0 auto; position: relative; overflow: hidden;
+}
+.cert-wrap::before {
+  content: ''; position: absolute; top: -60px; left: -60px;
+  width: 200px; height: 200px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(107,33,245,0.12), transparent);
+}
+.cert-wrap::after {
+  content: ''; position: absolute; bottom: -40px; right: -40px;
+  width: 160px; height: 160px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,107,26,0.1), transparent);
+}
+.cert-logo-marca { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.4rem; margin-bottom: 0.5rem; }
+.cert-logo-marca .sin { color: var(--morado); }
+.cert-logo-marca .tropia { color: var(--naranja); }
+.cert-linea { width: 60px; height: 3px; background: linear-gradient(90deg, var(--morado), var(--naranja)); border-radius: 2px; margin: 0.5rem auto 1.5rem; }
+.cert-subtitulo { font-size: 0.72rem; color: var(--texto-suave); text-transform: uppercase; letter-spacing: 0.15em; margin-bottom: 0.5rem; }
+.cert-nombre { font-family: 'Syne', sans-serif; font-size: 2rem; font-weight: 800; color: var(--texto); margin-bottom: 0.5rem; }
+.cert-completado { font-size: 0.85rem; color: var(--texto-medio); margin-bottom: 0.5rem; }
+.cert-curso { font-size: 1.1rem; font-weight: 700; color: var(--morado); margin-bottom: 1.5rem; }
+.cert-sello { font-size: 3rem; margin-bottom: 1rem; }
+.cert-fecha { font-size: 0.78rem; color: var(--texto-suave); }
+.cert-folio { font-size: 0.68rem; color: var(--texto-suave); margin-top: 4px; font-family: monospace; }
+
 /* Responsivo */
 @media (max-width: 768px) {
   .sidebar {
@@ -1192,6 +1279,219 @@ tbody tr:hover td { background: rgba(107, 33, 245, 0.03); }
         </div>
       </div>
 
+      <!-- CONSTRUCTOR DE CURSOS -->
+      <div class="seccion" id="sec-constructor">
+        <div class="encabezado-sec">
+          <span class="titulo-sec">Constructor de cursos</span>
+          <div style="display:flex;gap:0.5rem">
+            <button class="btn btn-fantasma btn-sm" onclick="mostrarNotif('Vista previa disponible proximamente','info')">Vista previa</button>
+            <button class="btn btn-primario btn-sm" onclick="mostrarNotif('Cambios guardados','exito')">Guardar cambios</button>
+          </div>
+        </div>
+        <div class="constructor-layout">
+          <!-- Panel modulos -->
+          <div>
+            <div style="background:var(--blanco);border:1px solid var(--borde);border-radius:14px;overflow:hidden">
+              <div style="padding:0.875rem 1rem;border-bottom:1px solid var(--borde);background:var(--fondo2);display:flex;justify-content:space-between;align-items:center">
+                <span style="font-family:Syne,sans-serif;font-weight:700;font-size:0.9rem">Modulos</span>
+                <button class="btn btn-fantasma btn-xs" onclick="agregarModulo()">+ Modulo</button>
+              </div>
+              <div style="padding:0.75rem" id="lista-modulos-cons">
+                <!-- generado por JS -->
+              </div>
+            </div>
+          </div>
+
+          <!-- Panel edicion -->
+          <div style="background:var(--blanco);border:1px solid var(--borde);border-radius:14px;overflow:hidden">
+            <div class="tabs-constructor">
+              <button class="tab-cons activo" id="tcbtn-info" onclick="cambiarTabCons(this,'tc-info')">Informacion</button>
+              <button class="tab-cons" id="tcbtn-contenido" onclick="cambiarTabCons(this,'tc-contenido')">Contenido</button>
+              <button class="tab-cons" id="tcbtn-evaluacion" onclick="cambiarTabCons(this,'tc-evaluacion')">Evaluacion</button>
+              <button class="tab-cons" id="tcbtn-ajustes" onclick="cambiarTabCons(this,'tc-ajustes')">Ajustes</button>
+            </div>
+
+            <!-- Tab: Informacion -->
+            <div class="panel-cons" id="tc-info">
+              <div class="form-campo"><label>Titulo del modulo</label><input type="text" id="cons-titulo" value="Fundamentos del liderazgo"></div>
+              <div class="form-campo"><label>Descripcion</label><textarea id="cons-desc">En este modulo exploraremos los conceptos fundamentales del liderazgo educativo desde una perspectiva sociocultural y organizacional.</textarea></div>
+              <div class="form-campo"><label>Objetivos de aprendizaje</label><textarea id="cons-objetivos">Al finalizar el modulo el participante sera capaz de: identificar los estilos de liderazgo, aplicar herramientas de diagnostico y disenar estrategias de cambio.</textarea></div>
+              <div class="form-2col">
+                <div class="form-campo"><label>Duracion (min)</label><input type="number" value="45"></div>
+                <div class="form-campo"><label>Orden</label><input type="number" value="1"></div>
+              </div>
+            </div>
+
+            <!-- Tab: Contenido -->
+            <div class="panel-cons" id="tc-contenido" style="display:none">
+              <div style="display:flex;gap:4px;background:var(--fondo2);padding:4px;border-radius:8px;margin-bottom:1.25rem;width:fit-content">
+                <button class="tab-cons activo" id="ctbtn-pdf" onclick="cambiarTabContenido(this,'ct-pdf')" style="font-size:0.75rem;padding:6px 14px">PDF / Doc</button>
+                <button class="tab-cons" id="ctbtn-youtube" onclick="cambiarTabContenido(this,'ct-youtube')" style="font-size:0.75rem;padding:6px 14px">YouTube / URL</button>
+                <button class="tab-cons" id="ctbtn-video" onclick="cambiarTabContenido(this,'ct-video')" style="font-size:0.75rem;padding:6px 14px">Video IA</button>
+                <button class="tab-cons" id="ctbtn-scorm" onclick="cambiarTabContenido(this,'ct-scorm')" style="font-size:0.75rem;padding:6px 14px">SCORM</button>
+              </div>
+
+              <!-- PDF -->
+              <div id="ct-pdf">
+                <input type="file" id="inp-pdf" accept=".pdf,.pptx,.docx,.doc" style="display:none" onchange="manejarSubidaPDF(this)">
+                <div class="zona-subida" onclick="document.getElementById('inp-pdf').click()"
+                  ondragover="event.preventDefault();this.style.borderColor='var(--morado)'"
+                  ondragleave="this.style.borderColor=''"
+                  ondrop="event.preventDefault();manejarDropPDF(event)">
+                  <div class="zona-icono">&#128196;</div>
+                  <div class="zona-titulo">Subir PDF o documento</div>
+                  <div class="zona-hint" style="margin-bottom:1rem">PDF, PPTX, DOCX &middot; arrastra o haz clic</div>
+                  <button class="btn btn-fantasma btn-sm" onclick="event.stopPropagation();document.getElementById('inp-pdf').click()">Seleccionar archivo</button>
+                </div>
+                <div class="lista-archivos" id="lista-pdfs"></div>
+                <div id="preview-pdf-wrap" style="display:none;margin-top:1rem">
+                  <div style="font-size:0.75rem;color:var(--texto-suave);margin-bottom:0.5rem">Vista previa:</div>
+                  <iframe id="preview-pdf-frame" style="width:100%;height:420px;border:1px solid var(--borde);border-radius:10px"></iframe>
+                </div>
+              </div>
+
+              <!-- YouTube -->
+              <div id="ct-youtube" style="display:none">
+                <div class="form-campo">
+                  <label>URL de YouTube, Vimeo o Google Slides</label>
+                  <div style="display:flex;gap:0.5rem">
+                    <input type="url" id="inp-url-embed" placeholder="https://www.youtube.com/watch?v=..." style="flex:1">
+                    <button class="btn btn-primario btn-sm" onclick="previsualizarEmbed()">Ver</button>
+                  </div>
+                </div>
+                <div class="form-campo">
+                  <label>Tipo</label>
+                  <select id="sel-tipo-embed">
+                    <option value="youtube">YouTube</option>
+                    <option value="vimeo">Vimeo</option>
+                    <option value="gslides">Google Slides</option>
+                    <option value="gdocs">Google Docs</option>
+                    <option value="iframe">iFrame generico</option>
+                  </select>
+                </div>
+                <div id="embed-preview-wrap" style="display:none">
+                  <div style="font-size:0.75rem;color:var(--texto-suave);margin-bottom:0.5rem;display:flex;justify-content:space-between">
+                    <span>Vista previa</span>
+                    <button class="btn btn-fantasma btn-xs" onclick="document.getElementById('embed-preview-wrap').style.display='none'">Cerrar</button>
+                  </div>
+                  <div class="embed-preview">
+                    <iframe id="iframe-embed" frameborder="0" allowfullscreen allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture;web-share" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                  </div>
+                </div>
+                <div class="lista-archivos" id="lista-embeds"></div>
+                <button class="btn btn-primario btn-sm" style="margin-top:1rem" onclick="guardarEmbed()">Agregar al modulo</button>
+              </div>
+
+              <!-- Video IA -->
+              <div id="ct-video" style="display:none">
+                <p style="font-size:0.85rem;color:var(--texto-medio);margin-bottom:1rem">Genera un video con IA y asignalo a este modulo.</p>
+                <button class="btn btn-acento btn-sm" onclick="irEstudio()">Ir al Video Studio IA</button>
+              </div>
+
+              <!-- SCORM -->
+              <div id="ct-scorm" style="display:none">
+                <input type="file" id="inp-scorm" accept=".zip" style="display:none" onchange="manejarSubidaSCORM(this)">
+                <div class="zona-subida" onclick="document.getElementById('inp-scorm').click()"
+                  ondragover="event.preventDefault();this.style.borderColor='var(--morado)'"
+                  ondragleave="this.style.borderColor=''"
+                  ondrop="event.preventDefault();manejarDropSCORM(event)">
+                  <div class="zona-icono">&#128230;</div>
+                  <div class="zona-titulo">Subir paquete SCORM</div>
+                  <div class="zona-hint" style="margin-bottom:1rem">Archivos .zip SCORM 1.2 / 2004</div>
+                  <button class="btn btn-fantasma btn-sm" onclick="event.stopPropagation();document.getElementById('inp-scorm').click()">Seleccionar archivo</button>
+                </div>
+                <div class="lista-archivos" id="lista-scorm"></div>
+              </div>
+            </div>
+
+            <!-- Tab: Evaluacion -->
+            <div class="panel-cons" id="tc-evaluacion" style="display:none">
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem">
+                <span style="font-weight:700;font-size:0.9rem">Preguntas del modulo</span>
+                <div style="display:flex;gap:0.5rem">
+                  <button class="btn btn-acento btn-xs" onclick="probarQuiz()">Probar</button>
+                  <button class="btn btn-fantasma btn-xs" onclick="agregarPregunta()">+ Pregunta</button>
+                </div>
+              </div>
+              <div id="lista-preguntas"></div>
+            </div>
+
+            <!-- Tab: Ajustes -->
+            <div class="panel-cons" id="tc-ajustes" style="display:none">
+              <div class="form-campo"><label>Acceso</label>
+                <select><option>Secuencial (modulos en orden)</option><option>Libre acceso</option><option>Por fecha de apertura</option></select>
+              </div>
+              <div class="form-campo"><label>Calificacion minima para avanzar (%)</label><input type="number" value="70"></div>
+              <div class="form-campo"><label>Intentos permitidos en evaluacion</label><input type="number" value="3"></div>
+              <div class="form-campo"><label>Certificado al completar</label>
+                <select><option>Si, emitir certificado automatico</option><option>No</option></select>
+              </div>
+              <button class="btn btn-primario btn-sm" onclick="mostrarNotif('Ajustes guardados','exito')">Guardar ajustes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CERTIFICADOS -->
+      <div class="seccion" id="sec-certificados">
+        <div class="encabezado-sec">
+          <span class="titulo-sec">Certificados</span>
+          <button class="btn btn-fantasma btn-sm" onclick="exportarCertPDF()">Descargar PDF</button>
+        </div>
+
+        <!-- Certificado visual -->
+        <div class="cert-wrap" id="cert-contenedor">
+          <div class="cert-logo-marca"><span class="sin">Sin</span><span class="tropia">tropia</span> Learn</div>
+          <div class="cert-linea"></div>
+          <div class="cert-subtitulo">Certifica que</div>
+          <div class="cert-nombre" id="cert-nombre">David Salgado Lopez</div>
+          <div class="cert-completado">ha completado exitosamente el curso</div>
+          <div class="cert-curso" id="cert-curso">Liderazgo Educativo SER</div>
+          <div class="cert-sello">&#127941;</div>
+          <div class="cert-fecha" id="cert-fecha">Emitido el 18 de agosto de 2026</div>
+          <div class="cert-folio" id="cert-folio">Folio: SL-2026-0001</div>
+          <div style="display:flex;gap:1rem;justify-content:center;margin-top:1.5rem;position:relative;z-index:1;flex-wrap:wrap">
+            <button class="btn btn-primario btn-sm" onclick="exportarCertPDF()">Descargar PDF</button>
+            <button class="btn btn-fantasma btn-sm" onclick="copiarEnlaceCert()">Copiar enlace</button>
+          </div>
+        </div>
+
+        <!-- Generar certificado personalizado -->
+        <div style="max-width:640px;margin:1.5rem auto 0">
+          <div style="background:var(--blanco);border:1px solid var(--borde);border-radius:14px;overflow:hidden">
+            <div style="padding:0.875rem 1rem;border-bottom:1px solid var(--borde);background:var(--fondo2);font-family:Syne,sans-serif;font-weight:700;font-size:0.9rem">Personalizar certificado</div>
+            <div style="padding:1.25rem">
+              <div class="form-2col">
+                <div class="form-campo"><label>Nombre del participante</label><input type="text" id="cert-inp-nombre" placeholder="Nombre completo" oninput="actualizarCert()"></div>
+                <div class="form-campo"><label>Curso completado</label>
+                  <select id="cert-inp-curso" onchange="actualizarCert()">
+                    <option>Liderazgo Educativo SER</option>
+                    <option>Metodologia PAR</option>
+                    <option>Comunicacion Organizacional</option>
+                    <option>Habilidades Socioemocionales</option>
+                  </select>
+                </div>
+              </div>
+              <button class="btn btn-primario btn-sm" onclick="exportarCertPDF()">Generar y descargar</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tabla de certificados emitidos -->
+        <div style="margin-top:1.5rem">
+          <div class="titulo-sec" style="margin-bottom:1rem">Certificados emitidos</div>
+          <div class="tabla-wrap">
+            <table>
+              <thead><tr><th>Participante</th><th>Curso</th><th>Fecha</th><th>Folio</th><th></th></tr></thead>
+              <tbody id="tabla-certs">
+                <tr><td>Ana Martinez</td><td>Liderazgo SER</td><td>2026-08-15</td><td style="font-family:monospace;font-size:0.75rem">SL-2026-0309</td><td><button class="btn btn-fantasma btn-xs" onclick="mostrarNotif('Descargando...','info')">&#8595;</button></td></tr>
+                <tr><td>Carlos Ruiz</td><td>Comunicacion Org.</td><td>2026-08-10</td><td style="font-family:monospace;font-size:0.75rem">SL-2026-0308</td><td><button class="btn btn-fantasma btn-xs" onclick="mostrarNotif('Descargando...','info')">&#8595;</button></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
       <!-- CONFIGURACION -->
       <div class="seccion" id="sec-config">
         <div class="encabezado-sec"><span class="titulo-sec">Configuracion</span></div>
@@ -1463,21 +1763,26 @@ var NAV_CONFIG = {
   admin: [
     { sec: 'sec-dashboard', icono: '&#127968;', label: 'Dashboard' },
     { sec: 'sec-cursos', icono: '&#128218;', label: 'Cursos' },
+    { sec: 'sec-constructor', icono: '&#9881;', label: 'Constructor' },
     { sec: 'sec-studio', icono: '&#127909;', label: 'Video Studio IA' },
     { sec: 'sec-usuarios', icono: '&#128101;', label: 'Usuarios' },
     { sec: 'sec-foro', icono: '&#128172;', label: 'Foro' },
-    { sec: 'sec-config', icono: '&#9881;', label: 'Configuracion' }
+    { sec: 'sec-certificados', icono: '&#127941;', label: 'Certificados' },
+    { sec: 'sec-config', icono: '&#128296;', label: 'Configuracion' }
   ],
   tutor: [
     { sec: 'sec-dashboard', icono: '&#127968;', label: 'Dashboard' },
     { sec: 'sec-cursos', icono: '&#128218;', label: 'Mis cursos' },
+    { sec: 'sec-constructor', icono: '&#9881;', label: 'Constructor' },
     { sec: 'sec-studio', icono: '&#127909;', label: 'Video Studio IA' },
-    { sec: 'sec-foro', icono: '&#128172;', label: 'Foro' }
+    { sec: 'sec-foro', icono: '&#128172;', label: 'Foro' },
+    { sec: 'sec-certificados', icono: '&#127941;', label: 'Certificados' }
   ],
   estudiante: [
     { sec: 'sec-dashboard', icono: '&#127968;', label: 'Mi aprendizaje' },
     { sec: 'sec-cursos', icono: '&#128218;', label: 'Catalogo' },
-    { sec: 'sec-foro', icono: '&#128172;', label: 'Foro' }
+    { sec: 'sec-foro', icono: '&#128172;', label: 'Foro' },
+    { sec: 'sec-certificados', icono: '&#127941;', label: 'Mis certificados' }
   ]
 };
 
@@ -1513,9 +1818,11 @@ function navegar(secId, el) {
   var titulos = {
     'sec-dashboard': 'Dashboard',
     'sec-cursos': 'Catalogo de cursos',
+    'sec-constructor': 'Constructor de cursos',
     'sec-studio': 'Video Studio IA',
     'sec-usuarios': 'Gestion de usuarios',
     'sec-foro': 'Foro',
+    'sec-certificados': 'Certificados',
     'sec-config': 'Configuracion'
   };
   document.getElementById('topbar-titulo').textContent = titulos[secId] || '';
@@ -1840,6 +2147,341 @@ function mostrarNotif(texto, tipo) {
   clearTimeout(notifTimer);
   notifTimer = setTimeout(function() { el.classList.remove('visible'); }, 3500);
 }
+
+// \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550
+// CONSTRUCTOR DE CURSOS
+// \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550
+var MODULOS_CONS = [
+  { num: 1, nombre: 'Fundamentos del liderazgo', lecciones: 4, duracion: '45 min' },
+  { num: 2, nombre: 'Estilos y modelos', lecciones: 3, duracion: '38 min' },
+  { num: 3, nombre: 'Comunicacion efectiva', lecciones: 5, duracion: '52 min' },
+  { num: 4, nombre: 'Evaluacion y cierre', lecciones: 2, duracion: '20 min' }
+];
+
+var moduloActivo = 0;
+
+function renderizarModulosCons() {
+  var lista = document.getElementById('lista-modulos-cons');
+  if (!lista) { return; }
+  var html = '';
+  for (var i = 0; i < MODULOS_CONS.length; i++) {
+    var m = MODULOS_CONS[i];
+    var activo = (i === moduloActivo) ? ' activo' : '';
+    html += '<div class="modulo-item' + activo + '" onclick="seleccionarModulo(' + i + ')">';
+    html += '<div class="modulo-num">Modulo 0' + m.num + '</div>';
+    html += '<div class="modulo-nombre">' + m.nombre + '</div>';
+    html += '<div class="modulo-meta">' + m.lecciones + ' lecciones &middot; ' + m.duracion + '</div>';
+    html += '</div>';
+  }
+  lista.innerHTML = html;
+}
+
+function seleccionarModulo(idx) {
+  moduloActivo = idx;
+  var m = MODULOS_CONS[idx];
+  if (m) {
+    var inp = document.getElementById('cons-titulo');
+    if (inp) { inp.value = m.nombre; }
+  }
+  renderizarModulosCons();
+  renderizarPreguntas();
+}
+
+function agregarModulo() {
+  var n = MODULOS_CONS.length + 1;
+  MODULOS_CONS.push({ num: n, nombre: 'Nuevo modulo ' + n, lecciones: 0, duracion: '0 min' });
+  moduloActivo = MODULOS_CONS.length - 1;
+  renderizarModulosCons();
+  mostrarNotif('Modulo creado', 'exito');
+}
+
+function cambiarTabCons(btn, tabId) {
+  var tabs = ['tc-info', 'tc-contenido', 'tc-evaluacion', 'tc-ajustes'];
+  var btns = document.querySelectorAll('.tab-cons');
+  for (var i = 0; i < btns.length; i++) { btns[i].classList.remove('activo'); }
+  btn.classList.add('activo');
+  for (var j = 0; j < tabs.length; j++) {
+    var el = document.getElementById(tabs[j]);
+    if (el) { el.style.display = (tabs[j] === tabId) ? 'block' : 'none'; }
+  }
+  if (tabId === 'tc-evaluacion') { renderizarPreguntas(); }
+}
+
+function cambiarTabContenido(btn, tabId) {
+  var tabs = ['ct-pdf', 'ct-youtube', 'ct-video', 'ct-scorm'];
+  var parent = btn.parentElement;
+  var btns = parent.querySelectorAll('.tab-cons');
+  for (var i = 0; i < btns.length; i++) { btns[i].classList.remove('activo'); }
+  btn.classList.add('activo');
+  for (var j = 0; j < tabs.length; j++) {
+    var el = document.getElementById(tabs[j]);
+    if (el) { el.style.display = (tabs[j] === tabId) ? 'block' : 'none'; }
+  }
+}
+
+// \u2500\u2500 PDF / DOCS \u2500\u2500
+function manejarSubidaPDF(inp) {
+  var file = inp.files[0];
+  if (!file) { return; }
+  agregarArchivoLista('lista-pdfs', file.name, (file.size / 1024 / 1024).toFixed(1) + ' MB', file);
+  inp.value = '';
+  // Preview PDF
+  if (file.type === 'application/pdf') {
+    var reader = new FileReader();
+    reader.onload = function(e) {
+      var wrap = document.getElementById('preview-pdf-wrap');
+      var frame = document.getElementById('preview-pdf-frame');
+      if (wrap && frame) {
+        frame.src = e.target.result;
+        wrap.style.display = 'block';
+      }
+    };
+    reader.readAsDataURL(file);
+  }
+  mostrarNotif('"' + file.name + '" cargado', 'exito');
+}
+
+function manejarDropPDF(e) {
+  var file = e.dataTransfer.files[0];
+  if (file) {
+    var inp = { files: [file], value: '' };
+    manejarSubidaPDF(inp);
+  }
+}
+
+function agregarArchivoLista(listaId, nombre, tamano, file) {
+  var lista = document.getElementById(listaId);
+  if (!lista) { return; }
+  var ext = nombre.split('.').pop().toLowerCase();
+  var iconos = { pdf: '&#128196;', pptx: '&#128202;', docx: '&#128196;', zip: '&#128230;', doc: '&#128196;', ppt: '&#128202;' };
+  var icono = iconos[ext] || '&#128196;';
+  var div = document.createElement('div');
+  div.className = 'archivo-item';
+  div.innerHTML = '<div class="archivo-nombre">' + icono + ' <span>' + nombre + '</span> <span style="color:var(--texto-suave);font-size:0.7rem">(' + tamano + ')</span></div>' +
+    '<div class="archivo-acciones">' +
+    '<span class="badge badge-verde">Listo</span>' +
+    '<button class="btn btn-fantasma btn-xs" onclick="this.closest('.archivo-item').remove()" style="color:var(--naranja)">&#10005;</button>' +
+    '</div>';
+  lista.appendChild(div);
+}
+
+// \u2500\u2500 YOUTUBE / EMBED \u2500\u2500
+function construirUrlEmbed(url, tipo) {
+  if (!url) { return ''; }
+  if (tipo === 'youtube' || url.includes('youtube.com') || url.includes('youtu.be')) {
+    var id = null;
+    var patrones = [
+      /youtu\.be\/([^?&]+)/,
+      /youtube\.com\/watch\?v=([^&]+)/,
+      /youtube\.com\/embed\/([^?&]+)/,
+      /youtube\.com\/shorts\/([^?&]+)/
+    ];
+    for (var i = 0; i < patrones.length; i++) {
+      var m = url.match(patrones[i]);
+      if (m) { id = m[1]; break; }
+    }
+    return id ? 'https://www.youtube-nocookie.com/embed/' + id + '?rel=0&modestbranding=1' : url;
+  }
+  if (tipo === 'vimeo' || url.includes('vimeo.com')) {
+    var vm = url.match(/vimeo\.com\/(\d+)/);
+    return vm ? 'https://player.vimeo.com/video/' + vm[1] : url;
+  }
+  if (tipo === 'gslides') { return url.replace('/pub?', '/embed?').replace('/edit', '/embed'); }
+  if (tipo === 'gdocs') { return url.replace('/edit', '/preview').replace('/view', '/preview'); }
+  return url;
+}
+
+var EMBEDS_GUARDADOS = [];
+
+function previsualizarEmbed() {
+  var url = document.getElementById('inp-url-embed').value.trim();
+  var tipo = document.getElementById('sel-tipo-embed').value;
+  if (!url) { mostrarNotif('Ingresa una URL primero', 'error'); return; }
+
+  // Auto-detectar tipo
+  if (url.includes('youtube.com') || url.includes('youtu.be')) { tipo = 'youtube'; document.getElementById('sel-tipo-embed').value = 'youtube'; }
+  else if (url.includes('vimeo.com')) { tipo = 'vimeo'; document.getElementById('sel-tipo-embed').value = 'vimeo'; }
+
+  var embedUrl = construirUrlEmbed(url, tipo);
+  var wrap = document.getElementById('embed-preview-wrap');
+  var iframe = document.getElementById('iframe-embed');
+
+  iframe.src = 'about:blank';
+  setTimeout(function() {
+    iframe.src = embedUrl;
+    wrap.style.display = 'block';
+    wrap.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }, 100);
+}
+
+function guardarEmbed() {
+  var url = document.getElementById('inp-url-embed').value.trim();
+  var tipo = document.getElementById('sel-tipo-embed').value;
+  if (!url) { mostrarNotif('Ingresa una URL primero', 'error'); return; }
+  var embedUrl = construirUrlEmbed(url, tipo);
+  var titulo = tipo === 'youtube' ? 'YouTube: ' + url.slice(-15) : url.slice(0, 40) + '...';
+  EMBEDS_GUARDADOS.push({ titulo: titulo, embedUrl: embedUrl, tipo: tipo });
+  renderizarEmbeds();
+  mostrarNotif('Recurso agregado al modulo', 'exito');
+}
+
+function renderizarEmbeds() {
+  var lista = document.getElementById('lista-embeds');
+  if (!lista) { return; }
+  var html = '';
+  for (var i = 0; i < EMBEDS_GUARDADOS.length; i++) {
+    var e = EMBEDS_GUARDADOS[i];
+    var icono = (e.tipo === 'youtube') ? '&#9654;&#65038;' : '&#128279;';
+    html += '<div class="archivo-item">';
+    html += '<div class="archivo-nombre">' + icono + ' <span>' + e.titulo + '</span></div>';
+    html += '<div class="archivo-acciones"><span class="badge badge-morado">' + e.tipo + '</span>';
+    html += '<button class="btn btn-fantasma btn-xs" onclick="previsualizarGuardado(' + i + ')">Ver</button>';
+    html += '<button class="btn btn-fantasma btn-xs" onclick="EMBEDS_GUARDADOS.splice(' + i + ',1);renderizarEmbeds()" style="color:var(--naranja)">&#10005;</button>';
+    html += '</div></div>';
+  }
+  lista.innerHTML = html;
+}
+
+function previsualizarGuardado(idx) {
+  var e = EMBEDS_GUARDADOS[idx];
+  var iframe = document.getElementById('iframe-embed');
+  var wrap = document.getElementById('embed-preview-wrap');
+  if (iframe && wrap) { iframe.src = e.embedUrl; wrap.style.display = 'block'; }
+}
+
+function irEstudio() {
+  var navItems = document.querySelectorAll('.nav-item');
+  for (var i = 0; i < navItems.length; i++) {
+    if (navItems[i].dataset.sec === 'sec-studio') {
+      navegar('sec-studio', navItems[i]);
+      break;
+    }
+  }
+}
+
+// \u2500\u2500 SCORM \u2500\u2500
+function manejarSubidaSCORM(inp) {
+  var file = inp.files[0];
+  if (!file) { return; }
+  if (!file.name.endsWith('.zip')) { mostrarNotif('Solo se aceptan archivos .zip', 'error'); return; }
+  agregarArchivoLista('lista-scorm', file.name, (file.size / 1024 / 1024).toFixed(1) + ' MB', file);
+  inp.value = '';
+  mostrarNotif('SCORM "' + file.name + '" cargado', 'exito');
+}
+
+function manejarDropSCORM(e) {
+  var file = e.dataTransfer.files[0];
+  if (file) { manejarSubidaSCORM({ files: [file], value: '' }); }
+}
+
+// \u2500\u2500 QUIZ \u2500\u2500
+var PREGUNTAS = [
+  {
+    texto: '?Que caracteriza al liderazgo situacional?',
+    opciones: ['Aplicar siempre el mismo estilo', 'Adaptar el estilo al nivel de madurez del colaborador', 'Delegar todas las decisiones al equipo'],
+    correcta: 1
+  },
+  {
+    texto: '?Cual es la diferencia entre dirigir y liderar?',
+    opciones: ['No hay diferencia, son sinonimos', 'Dirigir es gestionar tareas; liderar es inspirar y motivar', 'Liderar requiere mayor jerarquia formal'],
+    correcta: 1
+  }
+];
+
+function renderizarPreguntas() {
+  var lista = document.getElementById('lista-preguntas');
+  if (!lista) { return; }
+  var html = '';
+  for (var i = 0; i < PREGUNTAS.length; i++) {
+    var p = PREGUNTAS[i];
+    html += '<div class="pregunta-card">';
+    html += '<span class="pregunta-num">P' + (i + 1) + '</span>';
+    html += '<div style="font-size:0.85rem;font-weight:600;margin-bottom:0.75rem">' + p.texto + '</div>';
+    for (var j = 0; j < p.opciones.length; j++) {
+      var esCorrecta = (j === p.correcta) ? ' opcion-correcta' : '';
+      html += '<div class="opcion-item">';
+      html += '<input type="radio" name="q' + i + '" ' + (j === p.correcta ? 'checked' : '') + '>';
+      html += '<span class="' + esCorrecta + '">' + (j === p.correcta ? '&#10003; ' : '') + p.opciones[j] + '</span>';
+      html += '</div>';
+    }
+    html += '<button class="btn btn-fantasma btn-xs" style="margin-top:0.5rem;color:var(--naranja)" onclick="eliminarPregunta(' + i + ')">Eliminar</button>';
+    html += '</div>';
+  }
+  lista.innerHTML = html;
+}
+
+function agregarPregunta() {
+  PREGUNTAS.push({
+    texto: 'Nueva pregunta ' + (PREGUNTAS.length + 1),
+    opciones: ['Opcion A', 'Opcion B (correcta)', 'Opcion C'],
+    correcta: 1
+  });
+  renderizarPreguntas();
+  mostrarNotif('Pregunta agregada', 'exito');
+}
+
+function eliminarPregunta(idx) {
+  PREGUNTAS.splice(idx, 1);
+  renderizarPreguntas();
+}
+
+function probarQuiz() {
+  var correctas = 0;
+  for (var i = 0; i < PREGUNTAS.length; i++) {
+    var sel = document.querySelector('input[name="q' + i + '"]:checked');
+    if (sel) {
+      var opciones = document.querySelectorAll('input[name="q' + i + '"]');
+      for (var j = 0; j < opciones.length; j++) {
+        if (opciones[j].checked && j === PREGUNTAS[i].correcta) { correctas++; break; }
+      }
+    }
+  }
+  var pct = Math.round((correctas / PREGUNTAS.length) * 100);
+  mostrarNotif('Resultado: ' + correctas + '/' + PREGUNTAS.length + ' correctas (' + pct + '%)', pct >= 70 ? 'exito' : 'error');
+}
+
+// \u2500\u2500 Init constructor \u2500\u2500
+function iniciarConstructor() {
+  renderizarModulosCons();
+  renderizarPreguntas();
+}
+
+// \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550
+// CERTIFICADOS
+// \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550
+function actualizarCert() {
+  var nombre = document.getElementById('cert-inp-nombre').value.trim();
+  var curso = document.getElementById('cert-inp-curso').value;
+  if (nombre) { document.getElementById('cert-nombre').textContent = nombre; }
+  document.getElementById('cert-curso').textContent = curso;
+  // Actualizar folio
+  var folio = 'SL-2026-' + String(Math.floor(Math.random() * 900) + 100).padStart(4, '0');
+  document.getElementById('cert-folio').textContent = 'Folio: ' + folio;
+}
+
+function exportarCertPDF() {
+  window.print();
+}
+
+function copiarEnlaceCert() {
+  var texto = window.location.href + '#certificado';
+  if (navigator.clipboard) {
+    navigator.clipboard.writeText(texto).then(function() {
+      mostrarNotif('Enlace copiado al portapapeles', 'exito');
+    });
+  } else {
+    mostrarNotif('Enlace: ' + texto, 'info');
+  }
+}
+
+// \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550
+// HOOK: iniciar constructor al navegar
+// \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550
+var _navegar_original = navegar;
+navegar = function(secId, el) {
+  _navegar_original(secId, el);
+  if (secId === 'sec-constructor') { iniciarConstructor(); }
+};
 </script>
 </body>
 </html>
