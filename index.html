@@ -990,14 +990,14 @@ tbody tr:hover td { background: rgba(107, 33, 245, 0.03); }
 
     <div class="campo">
       <label for="inp-email">Correo electronico</label>
-      <input type="email" id="inp-email" placeholder="dsalgado@sintropiasocial.com" autocomplete="username">
+      <input type="email" id="inp-email" placeholder="dsalgado@sintropiasocial.com" value="" autocomplete="username">
     </div>
 
     <div class="campo">
       <label for="inp-pass">Contrasena</label>
       <div class="campo-pass">
         <input type="password" id="inp-pass" placeholder="Escribe tu contrasena" autocomplete="current-password" onkeydown="manejarEnter(event)">
-        <button type="button" class="btn-ojo" id="btn-ojo" onclick="toggleContrasena()">&#128065;</button>
+        <button type="button" class="btn-ojo" id="btn-ojo" onclick="toggleContrasena()" title="Mostrar/ocultar contrasena" style="font-size:0.9rem;font-weight:700;letter-spacing:0.05em">VER</button>
       </div>
     </div>
 
@@ -1024,6 +1024,7 @@ tbody tr:hover td { background: rgba(107, 33, 245, 0.03); }
     </div>
 
     <p class="login-pie">Problemas? <a href="mailto:dsalgado@sintropiasocial.com">Contacta al administrador</a></p>
+    <p style="text-align:center;margin-top:0.5rem;font-size:0.68rem;color:var(--texto-suave)">Admin: dsalgado@sintropiasocial.com</p>
   </div>
 </div>
 
@@ -1642,12 +1643,13 @@ function manejarEnter(e) {
 function toggleContrasena() {
   var inp = document.getElementById('inp-pass');
   var btn = document.getElementById('btn-ojo');
+  if (!inp) { return; }
   if (inp.type === 'password') {
     inp.type = 'text';
-    btn.innerHTML = '&#128584;';
+    if (btn) { btn.textContent = 'OC'; }
   } else {
     inp.type = 'password';
-    btn.innerHTML = '&#128065;';
+    if (btn) { btn.textContent = 'VER'; }
   }
   inp.focus();
 }
@@ -1687,7 +1689,7 @@ function hacerLogin() {
       emailEl.value = '';
       passEl.value = '';
       passEl.type = 'password';
-      document.getElementById('btn-ojo').innerHTML = '&#128065;';
+      document.getElementById('btn-ojo').textContent = 'O';
     }, 400);
 
   } else {
