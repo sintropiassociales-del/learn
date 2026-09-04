@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Sintropia Learn</title>
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -25,7 +25,7 @@
 }
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Inter', sans-serif;
   background: var(--fondo);
   color: var(--texto);
   min-height: 100vh;
@@ -63,7 +63,7 @@ body {
 
 .login-logo .badge-learn {
   display: inline-block;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 0.65rem;
   font-weight: 700;
   letter-spacing: 0.18em;
@@ -136,7 +136,7 @@ body {
   border: none;
   background: transparent;
   color: var(--texto-medio);
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 0.82rem;
   font-weight: 600;
   cursor: pointer;
@@ -170,7 +170,7 @@ body {
   border-radius: 10px;
   background: var(--fondo);
   color: var(--texto);
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 0.9rem;
   outline: none;
   transition: border-color 0.2s;
@@ -211,7 +211,7 @@ body {
   color: var(--blanco);
   border: none;
   border-radius: 10px;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 0.95rem;
   font-weight: 700;
   cursor: pointer;
@@ -255,7 +255,7 @@ body {
   padding: 10px 8px;
   border-radius: 10px;
   cursor: pointer;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 0.82rem;
   font-weight: 600;
   transition: all 0.2s;
@@ -399,7 +399,7 @@ body {
   border-left: 3px solid var(--morado);
 }
 
-.nav-icon { font-size: 1rem; flex-shrink: 0; }
+
 .nav-label { flex: 1; }
 
 .sidebar-pie {
@@ -564,7 +564,7 @@ body {
   padding: 9px 18px;
   border: none;
   border-radius: 10px;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 0.85rem;
   font-weight: 600;
   cursor: pointer;
@@ -834,7 +834,7 @@ tbody tr:hover td { background: rgba(107, 33, 245, 0.03); }
   border-radius: 10px;
   background: var(--fondo);
   color: var(--texto);
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 0.88rem;
   outline: none;
   transition: border-color 0.2s;
@@ -869,7 +869,7 @@ tbody tr:hover td { background: rgba(107, 33, 245, 0.03); }
 .tabs-constructor { display: flex; border-bottom: 1px solid var(--borde); background: var(--fondo2); }
 .tab-cons {
   padding: 0.75rem 1.25rem; background: transparent; border: none;
-  color: var(--texto-medio); font-family: 'Open Sans', sans-serif;
+  color: var(--texto-medio); font-family: 'Inter', sans-serif;
   font-size: 0.83rem; font-weight: 600; cursor: pointer;
   border-bottom: 2px solid transparent; transition: all 0.15s;
 }
@@ -1212,7 +1212,7 @@ tbody tr:hover td { background: rgba(107, 33, 245, 0.03); }
                 <span style="font-family:Syne,sans-serif;font-weight:700;font-size:0.9rem">Prompt del video</span>
               </div>
               <div style="padding:1.25rem">
-                <textarea id="prompt-video" style="width:100%;min-height:100px;resize:none;border:1.5px solid var(--borde);border-radius:10px;background:var(--fondo);color:var(--texto);font-family:Open Sans,sans-serif;font-size:0.85rem;padding:0.75rem;outline:none;transition:border-color 0.2s" placeholder="Describe el contenido del video. Ej: Explica los estilos de liderazgo situacional con ejemplos educativos..." onfocus="this.style.borderColor='var(--morado)'" onblur="this.style.borderColor='var(--borde)'"></textarea>
+                <textarea id="prompt-video" style="width:100%;min-height:100px;resize:none;border:1.5px solid var(--borde);border-radius:10px;background:var(--fondo);color:var(--texto);font-family:Inter,sans-serif;font-size:0.85rem;padding:0.75rem;outline:none;transition:border-color 0.2s" placeholder="Describe el contenido del video. Ej: Explica los estilos de liderazgo situacional con ejemplos educativos..." onfocus="this.style.borderColor='var(--morado)'" onblur="this.style.borderColor='var(--borde)'"></textarea>
               </div>
             </div>
 
@@ -1273,7 +1273,7 @@ tbody tr:hover td { background: rgba(107, 33, 245, 0.03); }
             <div style="padding:0.875rem 1rem;border-bottom:1px solid var(--borde);font-weight:700"># <span id="canal-nombre">General</span></div>
             <div id="mensajes-foro" style="flex:1;overflow-y:auto;padding:1rem;display:flex;flex-direction:column;gap:0.75rem"></div>
             <div style="padding:0.75rem 1rem;border-top:1px solid var(--borde);display:flex;gap:0.5rem;background:var(--fondo2)">
-              <input id="inp-mensaje" style="flex:1;padding:8px 14px;border:1.5px solid var(--borde);border-radius:20px;font-family:Open Sans,sans-serif;font-size:0.85rem;outline:none;background:var(--blanco);color:var(--texto)" placeholder="Escribe un mensaje..." onkeydown="if(event.key==='Enter')enviarMensaje()">
+              <input id="inp-mensaje" style="flex:1;padding:8px 14px;border:1.5px solid var(--borde);border-radius:20px;font-family:Inter,sans-serif;font-size:0.85rem;outline:none;background:var(--blanco);color:var(--texto)" placeholder="Escribe un mensaje..." onkeydown="if(event.key==='Enter')enviarMensaje()">
               <button class="btn btn-primario btn-sm" onclick="enviarMensaje()">Enviar</button>
             </div>
           </div>
@@ -1428,6 +1428,92 @@ tbody tr:hover td { background: rgba(107, 33, 245, 0.03); }
                 <select><option>Si, emitir certificado automatico</option><option>No</option></select>
               </div>
               <button class="btn btn-primario btn-sm" onclick="mostrarNotif('Ajustes guardados','exito')">Guardar ajustes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ANALITICAS -->
+      <div class="seccion" id="sec-analiticas">
+        <div class="encabezado-sec">
+          <span class="titulo-sec">Analiticas y reportes</span>
+          <button class="btn btn-fantasma btn-sm" onclick="exportarCSV()">Exportar CSV</button>
+        </div>
+
+        <!-- KPIs principales -->
+        <div class="grid-stats" style="margin-bottom:1.5rem">
+          <div class="stat morado">
+            <div class="stat-icono">&#128101;</div>
+            <div class="stat-valor">127</div>
+            <div class="stat-etiqueta">Estudiantes activos</div>
+            <div class="stat-delta">+12 este mes</div>
+          </div>
+          <div class="stat naranja">
+            <div class="stat-icono">&#9989;</div>
+            <div class="stat-valor">74%</div>
+            <div class="stat-etiqueta">Tasa de completacion</div>
+            <div class="stat-delta">+5% vs mes anterior</div>
+          </div>
+          <div class="stat verde">
+            <div class="stat-icono">&#127941;</div>
+            <div class="stat-valor">312</div>
+            <div class="stat-etiqueta">Certificados emitidos</div>
+            <div class="stat-delta">+24 este mes</div>
+          </div>
+          <div class="stat amarillo">
+            <div class="stat-icono">&#9200;</div>
+            <div class="stat-valor">4.2h</div>
+            <div class="stat-etiqueta">Promedio por estudiante</div>
+            <div class="stat-delta">+0.8h vs mes anterior</div>
+          </div>
+        </div>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-bottom:1.5rem">
+
+          <!-- Grafica: Inscripciones por mes -->
+          <div style="background:var(--blanco);border:1px solid var(--borde);border-radius:14px;padding:1.25rem">
+            <div style="font-family:Syne,sans-serif;font-weight:700;font-size:0.95rem;margin-bottom:1.25rem">Inscripciones por mes</div>
+            <div style="display:flex;align-items:flex-end;gap:8px;height:140px;padding:0 0.25rem" id="chart-inscripciones">
+              <!-- generado por JS -->
+            </div>
+            <div style="display:flex;justify-content:space-between;margin-top:0.5rem;font-size:0.68rem;color:var(--texto-suave)" id="chart-labels-meses">
+              <!-- generado por JS -->
+            </div>
+          </div>
+
+          <!-- Grafica: Completacion por curso -->
+          <div style="background:var(--blanco);border:1px solid var(--borde);border-radius:14px;padding:1.25rem">
+            <div style="font-family:Syne,sans-serif;font-weight:700;font-size:0.95rem;margin-bottom:1.25rem">Completacion por curso</div>
+            <div id="chart-cursos">
+              <!-- generado por JS -->
+            </div>
+          </div>
+        </div>
+
+        <div style="display:grid;grid-template-columns:2fr 1fr;gap:1.5rem">
+
+          <!-- Tabla: Progreso por estudiante -->
+          <div style="background:var(--blanco);border:1px solid var(--borde);border-radius:14px;overflow:hidden">
+            <div style="padding:0.875rem 1rem;border-bottom:1px solid var(--borde);background:var(--fondo2);display:flex;justify-content:space-between;align-items:center">
+              <span style="font-family:Syne,sans-serif;font-weight:700;font-size:0.9rem">Progreso por estudiante</span>
+              <input type="text" id="filtro-estudiantes" placeholder="Buscar..." oninput="filtrarEstudiantes(this.value)"
+                style="padding:5px 10px;border:1px solid var(--borde);border-radius:6px;font-size:0.78rem;outline:none;font-family:Inter,sans-serif">
+            </div>
+            <div style="overflow-x:auto">
+              <table>
+                <thead><tr><th>Estudiante</th><th>Curso</th><th>Progreso</th><th>Ultima actividad</th><th>Estado</th></tr></thead>
+                <tbody id="tabla-progreso"></tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Distribucion roles -->
+          <div style="background:var(--blanco);border:1px solid var(--borde);border-radius:14px;padding:1.25rem">
+            <div style="font-family:Syne,sans-serif;font-weight:700;font-size:0.95rem;margin-bottom:1.25rem">Distribucion por rol</div>
+            <div id="chart-roles"><!-- generado por JS --></div>
+            <div style="margin-top:1.5rem">
+              <div style="font-family:Syne,sans-serif;font-weight:700;font-size:0.95rem;margin-bottom:0.875rem">Cursos mas activos</div>
+              <div id="chart-activos"><!-- generado por JS --></div>
             </div>
           </div>
         </div>
@@ -1769,6 +1855,7 @@ var NAV_CONFIG = {
     { sec: 'sec-studio', icono: '&#127909;', label: 'Video Studio IA' },
     { sec: 'sec-usuarios', icono: '&#128101;', label: 'Usuarios' },
     { sec: 'sec-foro', icono: '&#128172;', label: 'Foro' },
+    { sec: 'sec-analiticas', icono: '&#128202;', label: 'Analiticas' },
     { sec: 'sec-certificados', icono: '&#127941;', label: 'Certificados' },
     { sec: 'sec-config', icono: '&#128296;', label: 'Configuracion' }
   ],
@@ -1778,6 +1865,7 @@ var NAV_CONFIG = {
     { sec: 'sec-constructor', icono: '&#9881;', label: 'Constructor' },
     { sec: 'sec-studio', icono: '&#127909;', label: 'Video Studio IA' },
     { sec: 'sec-foro', icono: '&#128172;', label: 'Foro' },
+    { sec: 'sec-analiticas', icono: '&#128202;', label: 'Analiticas' },
     { sec: 'sec-certificados', icono: '&#127941;', label: 'Certificados' }
   ],
   estudiante: [
@@ -1796,7 +1884,6 @@ function construirNav() {
     var item = items[i];
     var activo = (i === 0) ? ' activo' : '';
     html += '<div class="nav-item' + activo + '" data-sec="' + item.sec + '" onclick="navegar(\'' + item.sec + '\', this)">';
-    html += '<span class="nav-icon">' + item.icono + '</span>';
     html += '<span class="nav-label">' + item.label + '</span>';
     html += '</div>';
   }
@@ -1824,6 +1911,7 @@ function navegar(secId, el) {
     'sec-studio': 'Video Studio IA',
     'sec-usuarios': 'Gestion de usuarios',
     'sec-foro': 'Foro',
+    'sec-analiticas': 'Analiticas',
     'sec-certificados': 'Certificados',
     'sec-config': 'Configuracion'
   };
@@ -2483,7 +2571,174 @@ var _navegar_original = navegar;
 navegar = function(secId, el) {
   _navegar_original(secId, el);
   if (secId === 'sec-constructor') { iniciarConstructor(); }
+  if (secId === 'sec-analiticas') { renderizarAnaliticas(); }
 };
+
+// \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550
+// ANALITICAS
+// \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550
+var DATOS_MESES = [
+  { mes: 'Ene', valor: 8 }, { mes: 'Feb', valor: 12 }, { mes: 'Mar', valor: 15 },
+  { mes: 'Abr', valor: 22 }, { mes: 'May', valor: 18 }, { mes: 'Jun', valor: 25 },
+  { mes: 'Jul', valor: 20 }, { mes: 'Ago', valor: 31 }, { mes: 'Sep', valor: 28 },
+  { mes: 'Oct', valor: 35 }, { mes: 'Nov', valor: 30 }, { mes: 'Dic', valor: 38 }
+];
+
+var DATOS_CURSOS = [
+  { nombre: 'Liderazgo SER', pct: 78, color: 'var(--morado)' },
+  { nombre: 'Metodologia PAR', pct: 65, color: 'var(--naranja)' },
+  { nombre: 'Comunicacion Org.', pct: 82, color: '#0F9E7B' },
+  { nombre: 'Habilidades Socioemoc.', pct: 45, color: '#D4820A' }
+];
+
+var DATOS_PROGRESO = [
+  { nombre: 'Ana Martinez', curso: 'Liderazgo SER', progreso: 92, ultima: 'Hoy', estado: 'activo' },
+  { nombre: 'Carlos Ruiz', curso: 'Metodologia PAR', progreso: 68, ultima: 'Ayer', estado: 'activo' },
+  { nombre: 'Laura Garcia', curso: 'Comunicacion Org.', progreso: 100, ultima: 'hace 3 dias', estado: 'completado' },
+  { nombre: 'Miguel Perez', curso: 'Liderazgo SER', progreso: 45, ultima: 'hace 5 dias', estado: 'activo' },
+  { nombre: 'Sofia Luna', curso: 'Habilidades Socioemoc.', progreso: 22, ultima: 'hace 1 semana', estado: 'inactivo' },
+  { nombre: 'Roberto Diaz', curso: 'Metodologia PAR', progreso: 55, ultima: 'hace 2 dias', estado: 'activo' },
+  { nombre: 'Carmen Vega', curso: 'Comunicacion Org.', progreso: 78, ultima: 'Ayer', estado: 'activo' },
+  { nombre: 'Jorge Mendez', curso: 'Liderazgo SER', progreso: 100, ultima: 'hace 4 dias', estado: 'completado' }
+];
+
+function renderizarAnaliticas() {
+  renderizarChartMeses();
+  renderizarChartCursos();
+  renderizarTablaProgreso(DATOS_PROGRESO);
+  renderizarChartRoles();
+  renderizarChartActivos();
+}
+
+function renderizarChartMeses() {
+  var cont = document.getElementById('chart-inscripciones');
+  var labels = document.getElementById('chart-labels-meses');
+  if (!cont) { return; }
+  var max = Math.max.apply(null, DATOS_MESES.map(function(d) { return d.valor; }));
+  var html = '';
+  var labHtml = '';
+  for (var i = 0; i < DATOS_MESES.length; i++) {
+    var d = DATOS_MESES[i];
+    var pct = Math.round((d.valor / max) * 100);
+    var color = (i === DATOS_MESES.length - 1) ? 'var(--naranja)' : 'var(--morado)';
+    html += '<div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:4px;position:relative" title="' + d.mes + ': ' + d.valor + ' inscripciones">';
+    html += '<span style="font-size:0.65rem;color:var(--texto-suave);position:absolute;top:-18px">' + d.valor + '</span>';
+    html += '<div style="width:100%;display:flex;align-items:flex-end;height:120px">';
+    html += '<div style="width:100%;height:' + pct + '%;background:' + color + ';border-radius:4px 4px 0 0;transition:height 0.5s;opacity:' + (i === DATOS_MESES.length-1 ? '1' : '0.75') + '"></div>';
+    html += '</div></div>';
+    labHtml += '<span>' + d.mes + '</span>';
+  }
+  cont.innerHTML = html;
+  if (labels) { labels.innerHTML = labHtml; }
+}
+
+function renderizarChartCursos() {
+  var cont = document.getElementById('chart-cursos');
+  if (!cont) { return; }
+  var html = '';
+  for (var i = 0; i < DATOS_CURSOS.length; i++) {
+    var d = DATOS_CURSOS[i];
+    html += '<div style="margin-bottom:0.875rem">';
+    html += '<div style="display:flex;justify-content:space-between;margin-bottom:5px">';
+    html += '<span style="font-size:0.82rem;font-weight:600">' + d.nombre + '</span>';
+    html += '<span style="font-size:0.78rem;color:var(--texto-suave);font-weight:700">' + d.pct + '%</span>';
+    html += '</div>';
+    html += '<div style="height:10px;background:var(--fondo2);border-radius:5px;overflow:hidden">';
+    html += '<div style="height:100%;width:' + d.pct + '%;background:' + d.color + ';border-radius:5px;transition:width 0.8s"></div>';
+    html += '</div></div>';
+  }
+  cont.innerHTML = html;
+}
+
+function renderizarTablaProgreso(datos) {
+  var tbody = document.getElementById('tabla-progreso');
+  if (!tbody) { return; }
+  var html = '';
+  for (var i = 0; i < datos.length; i++) {
+    var d = datos[i];
+    var estadoBadge = d.estado === 'completado' ? 'badge-verde' : d.estado === 'inactivo' ? 'badge-naranja' : 'badge-morado';
+    html += '<tr>';
+    html += '<td style="font-weight:600">' + d.nombre + '</td>';
+    html += '<td style="font-size:0.8rem;color:var(--texto-medio)">' + d.curso + '</td>';
+    html += '<td><div class="barra" style="width:100px;margin-bottom:3px"><div class="barra-fill ' + (d.progreso===100?'verde':'') + '" style="width:' + d.progreso + '%"></div></div>';
+    html += '<span style="font-size:0.7rem;color:var(--texto-suave)">' + d.progreso + '%</span></td>';
+    html += '<td style="font-size:0.78rem;color:var(--texto-suave)">' + d.ultima + '</td>';
+    html += '<td><span class="badge ' + estadoBadge + '">' + d.estado + '</span></td>';
+    html += '</tr>';
+  }
+  tbody.innerHTML = html;
+}
+
+function filtrarEstudiantes(q) {
+  var filtrado = DATOS_PROGRESO.filter(function(d) {
+    return d.nombre.toLowerCase().includes(q.toLowerCase()) ||
+           d.curso.toLowerCase().includes(q.toLowerCase());
+  });
+  renderizarTablaProgreso(filtrado);
+}
+
+function renderizarChartRoles() {
+  var cont = document.getElementById('chart-roles');
+  if (!cont) { return; }
+  var roles = [
+    { label: 'Estudiantes', valor: 112, color: 'var(--morado)', pct: 88 },
+    { label: 'Tutores', valor: 12, color: 'var(--naranja)', pct: 9 },
+    { label: 'Admins', valor: 3, color: '#0F9E7B', pct: 3 }
+  ];
+  var html = '';
+  for (var i = 0; i < roles.length; i++) {
+    var r = roles[i];
+    html += '<div style="margin-bottom:0.75rem">';
+    html += '<div style="display:flex;justify-content:space-between;margin-bottom:4px">';
+    html += '<span style="font-size:0.8rem">' + r.label + '</span>';
+    html += '<span style="font-size:0.78rem;font-weight:700;color:var(--texto-medio)">' + r.valor + '</span>';
+    html += '</div>';
+    html += '<div style="height:8px;background:var(--fondo2);border-radius:4px;overflow:hidden">';
+    html += '<div style="height:100%;width:' + r.pct + '%;background:' + r.color + ';border-radius:4px"></div>';
+    html += '</div></div>';
+  }
+  cont.innerHTML = html;
+}
+
+function renderizarChartActivos() {
+  var cont = document.getElementById('chart-activos');
+  if (!cont) { return; }
+  var cursos = [
+    { nombre: 'Liderazgo SER', estudiantes: 42 },
+    { nombre: 'Comunicacion Org.', estudiantes: 35 },
+    { nombre: 'Metodologia PAR', estudiantes: 28 },
+    { nombre: 'HSE', estudiantes: 22 }
+  ];
+  var max = cursos[0].estudiantes;
+  var html = '';
+  for (var i = 0; i < cursos.length; i++) {
+    var c = cursos[i];
+    var pct = Math.round((c.estudiantes / max) * 100);
+    html += '<div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.5rem">';
+    html += '<span style="font-size:0.75rem;color:var(--texto-medio);width:90px;flex-shrink:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">' + c.nombre + '</span>';
+    html += '<div style="flex:1;height:6px;background:var(--fondo2);border-radius:3px;overflow:hidden">';
+    html += '<div style="height:100%;width:' + pct + '%;background:var(--morado);border-radius:3px"></div>';
+    html += '</div>';
+    html += '<span style="font-size:0.72rem;color:var(--texto-suave);width:24px;text-align:right">' + c.estudiantes + '</span>';
+    html += '</div>';
+  }
+  cont.innerHTML = html;
+}
+
+function exportarCSV() {
+  var filas = [['Estudiante','Curso','Progreso','Ultima actividad','Estado']];
+  for (var i = 0; i < DATOS_PROGRESO.length; i++) {
+    var d = DATOS_PROGRESO[i];
+    filas.push([d.nombre, d.curso, d.progreso + '%', d.ultima, d.estado]);
+  }
+  var csv = filas.map(function(r) { return r.join(','); }).join('\n');
+  var blob = new Blob([csv], { type: 'text/csv' });
+  var a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'sintropia_learn_reporte.csv';
+  a.click();
+  mostrarNotif('Reporte CSV descargado', 'exito');
+}
 </script>
 </body>
 </html>
