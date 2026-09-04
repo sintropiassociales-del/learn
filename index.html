@@ -1570,9 +1570,9 @@ tbody tr:hover td { background: rgba(107, 33, 245, 0.03); }
 </div>
 
 <script>
-// \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550
+// 
 // DATOS
-// \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550
+// 
 var rolActual = 'admin';
 var usuarioActual = { nombre: 'David Salgado', email: 'dsalgado@sintropiasocial.com', iniciales: 'DS' };
 
@@ -1615,9 +1615,9 @@ var MENSAJES_FORO = {
 
 var canalActual = 'General';
 
-// \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550
+// 
 // LOGIN
-// \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550
+// 
 function cambiarRol(rol, btn) {
   rolActual = rol;
   var tabs = document.querySelectorAll('.tab-rol');
@@ -1729,9 +1729,9 @@ function cerrarSesion() {
   rolActual = 'admin';
 }
 
-// \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550
+// 
 // APP INIT
-// \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550
+// 
 function iniciarApp() {
   construirNav();
   renderizarCursos();
@@ -1758,9 +1758,9 @@ function mostrarDashboard() {
   document.getElementById('dash-estudiante').style.display = (rolActual === 'estudiante') ? 'block' : 'none';
 }
 
-// \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550
+// 
 // NAVEGACION
-// \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550
+// 
 var NAV_CONFIG = {
   admin: [
     { sec: 'sec-dashboard', icono: '&#127968;', label: 'Dashboard' },
@@ -1843,9 +1843,9 @@ function cerrarSidebar() {
   document.getElementById('sidebar-overlay').style.display = 'none';
 }
 
-// \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550
+// 
 // CURSOS
-// \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550
+// 
 function renderizarCursos() {
   var grid = document.getElementById('grid-cursos');
   if (!grid) { return; }
@@ -1909,9 +1909,9 @@ function crearCurso() {
   mostrarNotif('Curso "' + titulo + '" creado', 'exito');
 }
 
-// \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550
+// 
 // USUARIOS
-// \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550
+// 
 function renderizarUsuarios() {
   var tbody = document.getElementById('tabla-usuarios');
   if (!tbody) { return; }
@@ -1936,9 +1936,9 @@ function renderizarUsuarios() {
   tbody.innerHTML = html;
 }
 
-// \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550
+// 
 // FORO
-// \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550
+// 
 function renderizarForo(canal) {
   canalActual = canal;
   document.getElementById('canal-nombre').textContent = canal;
@@ -1988,9 +1988,9 @@ function enviarMensaje() {
   renderizarForo(canalActual);
 }
 
-// \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550
+// 
 // VIDEO STUDIO
-// \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550
+// 
 var videoJugando = false;
 var videoIntervalo = null;
 
@@ -2104,9 +2104,9 @@ function resetearGeneracion() {
   document.getElementById('estado-video').textContent = 'Escribe un prompt y genera tu video';
 }
 
-// \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550
+// 
 // CONFIGURACION
-// \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550
+// 
 function guardarKeys() {
   var falKey = document.getElementById('fal-key').value.trim();
   var antKey = document.getElementById('ant-key').value.trim();
@@ -2116,9 +2116,9 @@ function guardarKeys() {
   document.getElementById('aviso-api').style.display = 'none';
 }
 
-// \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550
+// 
 // MODALES
-// \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550
+// 
 function abrirModal(id) {
   document.getElementById(id).classList.add('abierto');
 }
@@ -2135,9 +2135,9 @@ for (var mi = 0; mi < modales.length; mi++) {
   });
 }
 
-// \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550
+// 
 // NOTIFICACIONES
-// \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550
+// 
 var notifTimer = null;
 
 function mostrarNotif(texto, tipo) {
@@ -2150,9 +2150,9 @@ function mostrarNotif(texto, tipo) {
   notifTimer = setTimeout(function() { el.classList.remove('visible'); }, 3500);
 }
 
-// \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550
+// 
 // CONSTRUCTOR DE CURSOS
-// \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550
+// 
 var MODULOS_CONS = [
   { num: 1, nombre: 'Fundamentos del liderazgo', lecciones: 4, duracion: '45 min' },
   { num: 2, nombre: 'Estilos y modelos', lecciones: 3, duracion: '38 min' },
@@ -2221,7 +2221,7 @@ function cambiarTabContenido(btn, tabId) {
   }
 }
 
-// \u2500\u2500 PDF / DOCS \u2500\u2500
+//  PDF / DOCS 
 function manejarSubidaPDF(inp) {
   var file = inp.files[0];
   if (!file) { return; }
@@ -2262,12 +2262,12 @@ function agregarArchivoLista(listaId, nombre, tamano, file) {
   div.innerHTML = '<div class="archivo-nombre">' + icono + ' <span>' + nombre + '</span> <span style="color:var(--texto-suave);font-size:0.7rem">(' + tamano + ')</span></div>' +
     '<div class="archivo-acciones">' +
     '<span class="badge badge-verde">Listo</span>' +
-    '<button class="btn btn-fantasma btn-xs" onclick="this.closest('.archivo-item').remove()" style="color:var(--naranja)">&#10005;</button>' +
+    '<button class="btn btn-fantasma btn-xs" onclick="this.parentElement.parentElement.remove()" style="color:var(--naranja)">&#10005;</button>' +
     '</div>';
   lista.appendChild(div);
 }
 
-// \u2500\u2500 YOUTUBE / EMBED \u2500\u2500
+//  YOUTUBE / EMBED 
 function construirUrlEmbed(url, tipo) {
   if (!url) { return ''; }
   if (tipo === 'youtube' || url.includes('youtube.com') || url.includes('youtu.be')) {
@@ -2361,7 +2361,7 @@ function irEstudio() {
   }
 }
 
-// \u2500\u2500 SCORM \u2500\u2500
+//  SCORM 
 function manejarSubidaSCORM(inp) {
   var file = inp.files[0];
   if (!file) { return; }
@@ -2376,7 +2376,7 @@ function manejarDropSCORM(e) {
   if (file) { manejarSubidaSCORM({ files: [file], value: '' }); }
 }
 
-// \u2500\u2500 QUIZ \u2500\u2500
+//  QUIZ 
 var PREGUNTAS = [
   {
     texto: '?Que caracteriza al liderazgo situacional?',
@@ -2442,15 +2442,15 @@ function probarQuiz() {
   mostrarNotif('Resultado: ' + correctas + '/' + PREGUNTAS.length + ' correctas (' + pct + '%)', pct >= 70 ? 'exito' : 'error');
 }
 
-// \u2500\u2500 Init constructor \u2500\u2500
+//  Init constructor 
 function iniciarConstructor() {
   renderizarModulosCons();
   renderizarPreguntas();
 }
 
-// \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550
+// 
 // CERTIFICADOS
-// \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550
+// 
 function actualizarCert() {
   var nombre = document.getElementById('cert-inp-nombre').value.trim();
   var curso = document.getElementById('cert-inp-curso').value;
@@ -2476,9 +2476,9 @@ function copiarEnlaceCert() {
   }
 }
 
-// \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550
+// 
 // HOOK: iniciar constructor al navegar
-// \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550
+// 
 var _navegar_original = navegar;
 navegar = function(secId, el) {
   _navegar_original(secId, el);
